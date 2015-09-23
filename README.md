@@ -2,10 +2,10 @@
 
 An inofficial Android app, that displays available learning spaces on the Karlsruhe Institute of Technology campus. It queries the [official Learning Spaces data of the KIT library](http://www.bibliothek.kit.edu/cms/english/free-learning-places.php) and displays it in a mobile-friendly way.
 
-<img src="documentation/screenshot-map.png" width="200">
-<img src="documentation/screenshot-info-collapsed.png" width="200">
-<img src="documentation/screenshot-info-expanded.png" width="200">
-<img src="documentation/screenshot-list.png" width="200">
+<img src="documentation/screenshot-map.png" width="175">
+<img src="documentation/screenshot-info-collapsed.png" width="175">
+<img src="documentation/screenshot-info-expanded.png" width="175">
+<img src="documentation/screenshot-list.png" width="175">
 
 All code is written in [Kotlin](http://kotlinlang.org/), making heavy use of the [Anko library](https://github.com/JetBrains/anko/). To get a quick overview, check out [MainActivity](app/src/main/java/de/maxvogler/learningspaces/activities/MainActivity.kt), [Fragments](app/src/main/java/de/maxvogler/learningspaces/fragments/), [Location](app/src/main/java/de/maxvogler/learningspaces/models/Location.kt) and [LocationService](app/src/main/java/de/maxvogler/learningspaces/services/LocationService.kt).
 
