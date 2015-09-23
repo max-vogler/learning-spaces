@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KIT Lernplätze</string>
+    <string name="title_activity_main">@string/app_name</string>
+
+    <string name="building">Gebäude %s</string>
+    <string name="level">Stockwerk %d</string>
+    <string name="room">Raum %s</string>
+    <string name="closed">Geschlossen</string>
+    <string name="action_refresh">Neu laden</string>
+    <string name="action_open_website">Website öffnen</string>
+    <string name="action_open_about">Über</string>
+    <string name="website_url">http://www.bibliothek.kit.edu/cms/freie-lernplaetze.php?caller=mobileWebApp</string>
+    <string name="hidden"> </string>
+
+    <array name="weekdays">
+        <item />
+        <item>Montag</item>
+        <item>Dienstag</item>
+        <item>Mittwoch</item>
+        <item>Donnerstag</item>
+        <item>Freitag</item>
+        <item>Samstag</item>
+        <item>Sonntag</item>
+    </array>
+
+    <plurals name="seats_free_short">
+        <item quantity="other">%d frei</item>
+    </plurals>
+
+    <plurals name="seats_occupied_short">
+        <item quantity="other">%d besetzt</item>
+    </plurals>
+
+    <plurals name="seats_total_long">
+        <item quantity="other">%d Lernplätze insgesamt</item>
+    </plurals>
+
+    <plurals name="seats_free_long">
+        <item quantity="zero">Keine Plätze frei</item>
+        <item quantity="one">1 Platz frei</item>
+        <item quantity="other">%d Plätze frei</item>
+    </plurals>
+
+    <plurals name="hidden">
+        <item quantity="other"> </item>
+    </plurals>
+
+    <string name="open_always">durchgehend geöffnet</string>
+    <string name="open_until">geöffnet bis %1$s</string>
+
+    <string name="title_activity_about">Über</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_description">Eine inoffizielle Übersicht über Plätze zum Studieren am KIT.
+        Die Anzahl der freien Plätze stammt vom offiziellen KIT Lernplatz-Wegweiser und basiert auf
+        Zählungen des Bibliothekspersonals und automatischen Schätzungen.</string>
+    <string name="title_activity_licenses">Lizenzen</string>
+    <string name="error">Hups! Da ist etwas schief gegangen.</string>
+
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/drag_handle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/handle_height"
+        android:background="@drawable/selectable_white_background"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingBottom="@dimen/spacing"
+            android:singleLine="true"
+            android:text="Beispielbibliothek"
+            android:textSize="24sp" />
+
+        <de.maxvogler.learningspaces.views.PercentageView
+            android:id="@+id/seatsOverview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/panel_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing">
+
+            <TextView
+                android:id="@+id/descriptionBuilding"
+                style="@style/descriptionItem"
+                android:drawableLeft="@drawable/ic_place_grey600_36dp"
+                android:drawableStart="@drawable/ic_place_grey600_36dp"
+                android:text="Gebäude 50.34" />
+
+            <TextView
+                android:id="@+id/descriptionSeatsTotal"
+                style="@style/descriptionItem"
+                android:drawableLeft="@drawable/ic_people_outline_grey600_36dp"
+                android:drawableStart="@drawable/ic_people_outline_grey600_36dp"
+                android:text=" ??? Sitzplätze insgesamt" />
+
+            <LinearLayout
+                android:id="@+id/seatsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/InformationIcon"
+                    android:src="@drawable/ic_local_library_grey600_36dp" />
+
+                <LinearLayout
+                    android:id="@+id/seats"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/view_seat_count" />
+
+                    <include layout="@layout/view_seat_count" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/InformationIcon"
+                    android:src="@drawable/ic_access_time_grey600_36dp" />
+
+                <LinearLayout
+                    android:id="@+id/hours"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/view_open_hours" />
+
+                    <include layout="@layout/view_open_hours" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

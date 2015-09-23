@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing"
+            android:layout_marginRight="@dimen/spacing"
+            android:layout_marginTop="@dimen/spacing"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing"
+            android:layout_marginRight="@dimen/spacing"
+            android:text="@string/app_description"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing"
+            android:text="Zum offiziellen Wegweiser" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Programmierung &amp; Design: Max Vogler"
+            android:id="@+id/textView3"
+            android:layout_marginLeft="@dimen/spacing"
+            android:layout_marginTop="@dimen/spacing" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lizenz: MIT"
+            android:id="@+id/button_licenses"
+            android:layout_marginLeft="@dimen/spacing" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veröffentlicht auf: Github"
+            android:id="@+id/button_github"
+            android:layout_marginLeft="@dimen/spacing"
+            android:onClick="openGithubWebsite" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bildquelle: KIT Bibliothek"
+            android:id="@+id/button_image_source"
+            android:layout_marginLeft="@dimen/spacing"
+            android:onClick="openImageSource" />
+
+    </LinearLayout>
+</ScrollView>

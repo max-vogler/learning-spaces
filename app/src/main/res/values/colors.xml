@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="location_unavailable">#BCAAA4</color>
+    <color name="location_bad">#D84315</color>
+    <color name="location_okay">#00E676</color>
+    <!-- Teal A400 -->
+    <color name="location_good">#00E676</color>
+
+    <color name="background_translucent">#66000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="seats_bad">#ef9a9a</color>
+    <color name="seats_good">#A5D6A7</color>
+
+    <color name="primary">#9E9E9E</color>
+    <color name="primary_dark">#616161</color>
+    <color name="primary_light">#F5F5F5</color>
+    <color name="accent">#dedede</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="primary_accented">#009688</color>
+</resources>

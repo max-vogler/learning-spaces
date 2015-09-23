@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="spacing">16dp</dimen>
+    <dimen name="spacing_half">8dp</dimen>
+    <dimen name="item_height">36dp</dimen>
+    <dimen name="handle_height">110dp</dimen>
+    <dimen name="handle_transparent_height">175dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

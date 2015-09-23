@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_weight="0.25"
+        android:background="@color/seats_good"
+        android:gravity="center"
+        android:maxLines="1"
+        tools:text=" ?? belegt"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_weight="0.75"
+        android:background="@color/seats_bad"
+        android:gravity="center"
+        android:maxLines="1"
+        tools:text=" ?? frei"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/inactive"
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:layout_height="32dp"
+        android:background="#dedede"
+        android:gravity="center"
+        android:maxLines="1"
+        tools:text="@string/closed"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</merge>
