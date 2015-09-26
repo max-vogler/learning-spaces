@@ -47,8 +47,8 @@ public open class LocationServiceBaseTest : BaseTest() {
         assertEquals(SUNDAY, baseDate.dayOfWeek.toWeekday())
 
         (MONDAY..FRIDAY).forEach {
-            val date = baseDate.plusDays(it.weekday)
-            assertEquals(it, date.dayOfWeek.toWeekday())
+            val date = baseDate.plusDays(it.toInt())
+            assertEquals(it, date.toWeekday())
 
             (0..8).forEach { assertFalse(oh.containsDateTime(date.withHourOfDay(it))) }
             (9..21).forEach { assertTrue(oh.containsDateTime(date.withHourOfDay(it))) }

@@ -1,21 +1,18 @@
 package de.maxvogler.learningspaces.models
 
 
+import de.maxvogler.learningspaces.helpers.toWeekday
 import org.joda.time.LocalDateTime
 import java.util.*
 
 public class OpeningHours : TreeSet<OpeningHourPair>() {
 
     public fun containsDateTime(dateTime: LocalDateTime): Boolean {
-        return any { it.contains(dateTime) }
-    }
-
-    public fun getHoursForToday(): SortedSet<OpeningHourPair> {
-        return getHoursForDay(Weekday.today())
+        return any { it.contains(dateTime.toWeekday(), dateTime.toLocalTime()) }
     }
 
     public fun getHoursForDay(weekday: Weekday): SortedSet<OpeningHourPair> {
-        return filterTo(TreeSet<OpeningHourPair>(), { it.containsWeekday(weekday) })
+        return filterTo(TreeSet<OpeningHourPair>(), { it.contains(weekday) })
     }
 
     public fun getHoursForDayString(weekday: Weekday): String {
@@ -24,10 +21,9 @@ public class OpeningHours : TreeSet<OpeningHourPair>() {
         if (hours.isEmpty()) {
             return "Geschlossen"
         } else {
-            return hours.map { it.toTimeString(weekday) }.sorted().joinToString(separator = ", ")
+            return hours.sorted().map { it.toString() }.joinToString(", ")
         }
     }
-
 
     public fun getHoursStrings(): Map<Weekday, String> {
         val strings = TreeMap<Weekday, String>()

@@ -6,6 +6,6 @@ import com.squareup.otto.ThreadEnforcer
 
 public object BusProvider {
 
-    public val instance: Bus = Bus()
+    public var instance: Bus = Bus()
 
 }

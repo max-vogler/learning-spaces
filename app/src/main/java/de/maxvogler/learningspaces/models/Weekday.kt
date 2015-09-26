@@ -1,6 +1,7 @@
 package de.maxvogler.learningspaces.models
 
 import de.maxvogler.learningspaces.helpers.toWeekday
+import org.joda.time.LocalDate
 import org.joda.time.LocalDateTime
 
 public enum class Weekday(val weekday: Int) {
@@ -32,21 +33,18 @@ public enum class Weekday(val weekday: Int) {
             override val increment: Number = 1
 
             override fun iterator(): Iterator<Weekday> {
+                val iterator = if (end >= start) {
+                    IntProgressionIterator(start.toInt(), end.toInt(), 1)
+                } else {
+                    IntProgressionIterator(start.toInt(), end.toInt() + 7, 1)
+                }
+
                 return object : Iterator<Weekday> {
-                    var current = start
-
-                    override fun next(): Weekday {
-                        if (!hasNext()) {
-                            throw IllegalStateException()
-                        }
-
-                        val ret = current
-                        current = current.next
-                        return ret
-                    }
+                    override fun next(): Weekday
+                            = (((iterator.next() - 1 ) % 7) + 1).toWeekday()
 
                     override fun hasNext(): Boolean
-                            = current != end
+                            = iterator.hasNext()
 
                 }
             }
@@ -56,7 +54,7 @@ public enum class Weekday(val weekday: Int) {
 
     companion object {
         public fun today(): Weekday =
-                LocalDateTime.now().toWeekday()
+                LocalDate.now().toWeekday()
     }
 
 }

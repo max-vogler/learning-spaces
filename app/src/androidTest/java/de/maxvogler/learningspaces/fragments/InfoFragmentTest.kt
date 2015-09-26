@@ -18,11 +18,13 @@ import de.maxvogler.learningspaces.events.UpdateLocationsEvent
 import de.maxvogler.learningspaces.models.FreeSeatMeasurement
 import de.maxvogler.learningspaces.models.Location
 import de.maxvogler.learningspaces.models.OpeningHourPair
+import de.maxvogler.learningspaces.models.Weekday
 import de.maxvogler.learningspaces.services.BusProvider
 import de.maxvogler.learningspaces.services.LocationService
 import de.maxvogler.learningspaces.services.RememberSelectedLocationService
 import org.hamcrest.Matchers.notNullValue
 import org.joda.time.LocalDateTime
+import org.joda.time.LocalTime
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -128,7 +130,7 @@ public class InfoFragmentTest : ActivityInstrumentationTestCase2<MainActivity>(M
         location.coordinates = LatLng(0.0, 0.0)
         location.measurements.add(FreeSeatMeasurement(LocalDateTime.now(), 42))
         location.totalSeats = 100
-        location.openingHours.add(OpeningHourPair(LocalDateTime(2015, 8, 3, 0, 0, 0), LocalDateTime(2015, 8, 9, 23, 59, 59)))
+        location.openingHours.add(OpeningHourPair(Weekday.MONDAY, LocalTime(0, 0, 0), LocalTime(23, 59, 59)))
 
         return location
     }

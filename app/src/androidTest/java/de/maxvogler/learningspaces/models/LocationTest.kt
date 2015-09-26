@@ -3,6 +3,7 @@ package de.maxvogler.learningspaces.models
 import android.support.test.runner.AndroidJUnit4
 import com.google.android.gms.maps.model.LatLng
 import org.joda.time.LocalDateTime
+import org.joda.time.LocalTime
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -18,7 +19,7 @@ public class LocationTest {
         location.coordinates = LatLng(0.0, 0.0)
         location.measurements.add(FreeSeatMeasurement(LocalDateTime.now(), 42))
         location.totalSeats = 100
-        location.openingHours.add(OpeningHourPair(LocalDateTime(2015, 8, 3, 0, 0, 0), LocalDateTime(2015, 8, 9, 23, 59, 59)))
+        location.openingHours.add(OpeningHourPair(Weekday.MONDAY, LocalTime(0, 0, 0), LocalTime(23, 59, 59)))
 
         return location
     }
