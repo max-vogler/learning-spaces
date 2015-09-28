@@ -2,7 +2,6 @@ package de.maxvogler.learningspaces.models
 
 import de.maxvogler.learningspaces.helpers.toWeekday
 import org.joda.time.LocalDate
-import org.joda.time.LocalDateTime
 
 public enum class Weekday(val weekday: Int) {
 

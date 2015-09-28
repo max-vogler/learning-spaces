@@ -32,7 +32,7 @@ public class LocationListFragment : ListFragment() {
     private val mainActivity: MainActivity
         get() = activity as MainActivity
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val layout = inflater.inflate(R.layout.fragment_list, container, false)
         val menu = layout.find<Toolbar>(R.id.toolbar)
 

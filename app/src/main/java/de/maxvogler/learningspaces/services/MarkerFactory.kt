@@ -25,6 +25,7 @@ public class MarkerFactory(private val context: Context) {
         return MarkerOptions().position(location.coordinates)
     }
 
+    @Suppress("DEPRECATED_SYMBOL_WITH_MESSAGE")
     public fun createIcon(location: Location): Bitmap {
         val o = BitmapFactory.Options()
         o.inMutable = true
@@ -44,6 +45,7 @@ public class MarkerFactory(private val context: Context) {
         return bitmap
     }
 
+    @Suppress("DEPRECATED_SYMBOL_WITH_MESSAGE")
     private fun getColor(percentage: Float): Int {
         if (percentage > 0.4) {
             return context.resources.getColor(R.color.location_good)

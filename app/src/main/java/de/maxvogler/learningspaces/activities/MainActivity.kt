@@ -59,6 +59,7 @@ public class MainActivity : AppCompatActivity() {
 
     private val menuButtonPosition: IntArray = intArrayOf(0, 0)
 
+    @Suppress("DEPRECATED_SYMBOL_WITH_MESSAGE")
     override fun onCreate(state: Bundle?) {
         super.onCreate(state)
         setContentView(R.layout.activity_main)
@@ -108,6 +109,7 @@ public class MainActivity : AppCompatActivity() {
         bus.unregister(this)
     }
 
+    @Suppress("DEPRECATED_SYMBOL_WITH_MESSAGE")
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
 

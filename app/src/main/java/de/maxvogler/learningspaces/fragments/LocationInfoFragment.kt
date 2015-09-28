@@ -35,7 +35,7 @@ public class LocationInfoFragment : Fragment() {
 
     private val mBus = BusProvider.instance
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
             = inflater.inflate(R.layout.fragment_info, container, false)
 
     override fun onResume() {

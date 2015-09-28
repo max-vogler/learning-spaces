@@ -2,8 +2,6 @@ package de.maxvogler.learningspaces.helpers
 
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Adapter
 import java.util.*
 
 fun Menu.itemsSequence(): Sequence<MenuItem> = MenuItemsSequence(this)
