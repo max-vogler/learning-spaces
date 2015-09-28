@@ -21,6 +21,11 @@ import kotlin.properties.Delegates
  */
 public class LocationMapFragment : SupportMapFragment() {
 
+    companion object {
+        val START_LAT = 49.011019
+        val START_LNG = 8.414874
+    }
+
     private val bus = BusProvider.instance
 
     private var markers: Map<Location, Marker> = emptyMap()
@@ -43,7 +48,7 @@ public class LocationMapFragment : SupportMapFragment() {
 
         getMapAsync {
             this.mapView = it
-            val pos = LatLng(49.011019, 8.414874)
+            val pos = LatLng(START_LAT, START_LNG)
             it.uiSettings.isZoomControlsEnabled = false
             it.uiSettings.isMyLocationButtonEnabled = false
             it.uiSettings.isCompassEnabled = false
@@ -60,7 +65,7 @@ public class LocationMapFragment : SupportMapFragment() {
             }
 
             it.setOnMapClickListener {
-                bus post LocationFocusChangeEvent(null)
+                bus.post(LocationFocusChangeEvent(null))
             }
         }
     }

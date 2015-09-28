@@ -21,16 +21,15 @@ public class OpeningHourPair(
         return weekday == this.weekday && close != LocalTime.MIDNIGHT
     }
 
-    override fun toString() : String {
+    override fun toString(): String {
         return open.toString(format) + " - " + close.toString(format)
     }
 
     override fun compareTo(other: OpeningHourPair): Int {
-        return compareBy<OpeningHourPair>(
+        return compareValuesBy(this, other,
                 { it.weekday.toInt() },
                 { it.open },
-                { it.close }
-        ).compare(this, other)
+                { it.close })
     }
 
     companion object {
